@@ -8,7 +8,6 @@ $(document).keypress(function(){
     if (level === 0) {
         nextSequence();
     }
-
 });
 
 function nextSequence() {
@@ -38,8 +37,8 @@ function checkAnswer(currentLevel) {
         }, 200);
         $("#level-title").text("Game Over, Press Any Key to Restart");
         startOver();
-        var lost = true;
-        return lost;
+        // var lost = true;
+        // return lost;
     }
 }
 
@@ -61,9 +60,9 @@ $(".btn").click(function(){
     animatePress(userChosenColor);
     checkAnswer(answerIndex);
     answerIndex++;
-    if (lost != true) {
+    // if (lost != true) {
         playSound(userChosenColor);
-    }
+    // }
 });
 
 function animatePress(currentColor) {
